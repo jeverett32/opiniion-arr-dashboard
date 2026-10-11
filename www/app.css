@@ -1,0 +1,402 @@
+/* Opiniion ARR Bridge — brand stylesheet */
+
+:root {
+  --op-teal: #00A8A0;
+  --op-teal-deep: #007A74;
+  --op-teal-soft: #48C8C0;
+  --op-teal-wash: #E7F7F6;
+  --op-teal-mist: #F3FBFA;
+  --ink: #2A2A2A;
+  --ink-soft: #505050;
+  --muted: #6B7280;
+  --line: #E2E8F0;
+  --line-strong: #CBD5E1;
+  --card: #FFFFFF;
+  --good: #0F9F6E;
+  --bad: #D14343;
+  --warn: #D97706;
+  --shadow: 0 1px 2px rgba(42, 42, 42, 0.04), 0 4px 16px rgba(0, 168, 160, 0.06);
+  --radius: 12px;
+  --font: "DM Sans", "Segoe UI", system-ui, sans-serif;
+}
+
+html, body, .bslib-page-fill {
+  background:
+    radial-gradient(1200px 480px at 10% -10%, rgba(72, 200, 192, 0.18), transparent 60%),
+    radial-gradient(900px 420px at 100% 0%, rgba(0, 168, 160, 0.10), transparent 55%),
+    linear-gradient(180deg, var(--op-teal-mist) 0%, #F8FAFC 45%, #FFFFFF 100%) !important;
+  color: var(--ink);
+  font-family: var(--font) !important;
+}
+
+/* Hide accidental Express page chrome above the branded header */
+body.bslib-page-fill > h1:first-child,
+body.bslib-page-fill > h2:first-child {
+  display: none !important;
+}
+
+/* ----- Header / brand ----- */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 20px 10px;
+  margin: -0.5rem -0.5rem 8px;
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.brand-logo {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
+.brand-divider {
+  width: 1px;
+  height: 28px;
+  background: var(--line-strong);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.product-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.product-tag {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.header-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--op-teal-wash);
+  color: var(--op-teal-deep);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(0, 168, 160, 0.18);
+}
+
+.meta-pill .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--op-teal);
+  box-shadow: 0 0 0 3px rgba(0, 168, 160, 0.18);
+}
+
+/* ----- Nav ----- */
+.nav-underline {
+  border-bottom: 1px solid var(--line) !important;
+  margin-bottom: 18px !important;
+  gap: 4px !important;
+}
+
+.nav-underline .nav-link {
+  color: var(--ink-soft) !important;
+  font-weight: 560 !important;
+  font-size: 0.92rem !important;
+  padding: 0.65rem 0.9rem !important;
+  border: none !important;
+  border-bottom: 2px solid transparent !important;
+  border-radius: 0 !important;
+}
+
+.nav-underline .nav-link:hover {
+  color: var(--op-teal-deep) !important;
+  background: transparent !important;
+}
+
+.nav-underline .nav-link.active {
+  color: var(--op-teal-deep) !important;
+  border-bottom-color: var(--op-teal) !important;
+  font-weight: 700 !important;
+}
+
+/* ----- Page chrome ----- */
+h2.page-title {
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 4px 0 2px;
+  font-size: 1.45rem;
+}
+
+p.page-sub {
+  color: var(--muted);
+  margin-bottom: 14px;
+  max-width: 70ch;
+  font-size: 0.95rem;
+}
+
+/* ----- Filters ----- */
+.filter-bar {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 16px 6px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow);
+}
+
+.filter-bar .form-label,
+.filter-bar label {
+  font-size: 0.72rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted) !important;
+  font-weight: 650 !important;
+  margin-bottom: 4px !important;
+}
+
+.filter-bar .kpi-label-row > span:first-child {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  font-weight: 650;
+}
+
+.filter-bar .form-select,
+.filter-bar .selectize-input {
+  border-color: var(--line) !important;
+  border-radius: 8px !important;
+  font-size: 0.9rem !important;
+  box-shadow: none !important;
+}
+
+.filter-bar .form-select:focus,
+.filter-bar .selectize-input.focus {
+  border-color: var(--op-teal) !important;
+  box-shadow: 0 0 0 3px rgba(0, 168, 160, 0.15) !important;
+}
+
+/* ----- KPI cards ----- */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(168px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.kpi-card {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 16px 14px 18px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.kpi-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--op-teal);
+}
+
+.kpi-card:hover {
+  border-color: rgba(0, 168, 160, 0.35);
+  transform: translateY(-1px);
+}
+
+.kpi-label-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.kpi-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 650;
+}
+
+.tip-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: help;
+  background: #fff;
+}
+
+.tip-icon:hover {
+  border-color: var(--op-teal);
+  color: var(--op-teal-deep);
+  background: var(--op-teal-wash);
+}
+
+.kpi-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.kpi-delta {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.kpi-delta.up { color: var(--good); }
+.kpi-delta.down { color: var(--bad); }
+
+/* ----- Panels ----- */
+.panel-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 16px 12px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow);
+  height: 100%;
+}
+
+.panel-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.panel-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+/* ----- Definitions ----- */
+.defn-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.defn-item {
+  background: var(--op-teal-mist);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.defn-item dt {
+  font-weight: 700;
+  color: var(--op-teal-deep);
+  margin-bottom: 6px;
+  font-size: 0.92rem;
+}
+
+.defn-item dd {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+/* ----- About ----- */
+.about-list {
+  margin: 12px 0 0;
+  padding-left: 1.1rem;
+  color: var(--ink-soft);
+}
+
+.about-list li { margin-bottom: 6px; }
+
+/* Bootstrap tooltip polish */
+.tooltip-inner {
+  background: var(--ink) !important;
+  color: #fff !important;
+  font-family: var(--font) !important;
+  font-size: 0.78rem !important;
+  font-weight: 500 !important;
+  max-width: 280px !important;
+  text-align: left !important;
+  padding: 8px 10px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+
+.tooltip.bs-tooltip-top .tooltip-arrow::before,
+.tooltip.bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before {
+  border-top-color: var(--ink) !important;
+}
+
+/* Data tables */
+.shiny-data-grid {
+  border: 1px solid var(--line) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+
+.shiny-data-grid table thead th {
+  background: var(--op-teal-mist) !important;
+  color: var(--ink-soft) !important;
+  font-size: 0.75rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 650 !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .brand-logo { height: 30px; }
+  .kpi-value { font-size: 1.3rem; }
+}
